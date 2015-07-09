@@ -1,4 +1,4 @@
 # tournament-database-project
-Final project for Udacity Intro to Relational Databases
+Final project for <a href="https://www.udacity.com/course/intro-to-relational-databases--ud197">Udacity Intro to Relational Databases UD197</a>
 
-Simulates a swiss-style tournament ranking system by creating a PostgreSQL db of players, along with matches played and winnes/losses.
+Simulates a swiss-style tournament ranking system by creating and querying a PostgreSQL db of players, along with matches played and winnes/losses.
