@@ -1,10 +1,6 @@
 -- Table definitions for the tournament project.
---
--- Put your SQL 'create table' statements in this file; also 'create view'
--- statements if you choose to use it.
---
--- You can write comments in this file by starting them with two dashes, like
--- these lines here.
+
+-- Creates a new db
 
 DROP DATABASE IF EXISTS tournament;
 
@@ -12,9 +8,13 @@ create database tournament;
 
 \connect tournament;
 
+-- Creates tables to insert player and match data
+
 create table players (id serial primary key, name text);
 
 create table matches (id serial primary key, winner_id integer, loser_id integer);
+
+-- Creates views to manage match win/loss counting, generate player standings sorted by number of wins
 
 create view match_wins as (select winner_id, coalesce(count(winner_id), 0) as number from matches group by winner_id);
 
